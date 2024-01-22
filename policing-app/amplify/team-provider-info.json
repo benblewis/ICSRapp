@@ -1,0 +1,42 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-policinglab-staging-160447-authRole",
+      "UnauthRoleArn": "arn:aws:iam::148750120244:role/amplify-policinglab-staging-160447-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::148750120244:role/amplify-policinglab-staging-160447-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-policinglab-staging-160447-deployment",
+      "UnauthRoleName": "amplify-policinglab-staging-160447-unauthRole",
+      "StackName": "amplify-policinglab-staging-160447",
+      "StackId": "arn:aws:cloudformation:us-east-2:148750120244:stack/amplify-policinglab-staging-160447/b6680c80-7a62-11ee-9250-064be74e0e79",
+      "AmplifyAppId": "dokerm2luabmp",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-policinglab-staging-160447-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "policinglabeb533f6f": {},
+        "policinglabb7a1d48c": {}
+      },
+      "storage": {
+        "policinglab8c318963": {
+          "bucketName": "miticsrpolicing",
+          "region": "us-east-2"
+        },
+        "policinglab69078f83": {
+          "bucketName": "miticsrpolicing",
+          "region": "us-east-2"
+        }
+      },
+      "function": {
+        "policingdataauth": {},
+        "policelambdafunc": {
+          "deploymentBucketName": "amplify-policinglab-staging-160447-deployment",
+          "s3Key": "amplify-builds/policelambdafunc-69514c6a4d72635a4638-build.zip"
+        }
+      },
+      "api": {
+        "policingauthapi": {}
+      }
+    }
+  }
+}

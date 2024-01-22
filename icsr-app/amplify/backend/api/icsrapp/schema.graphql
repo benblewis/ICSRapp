@@ -1,0 +1,15 @@
+type DataVisitation @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Vertical: String
+  state: String
+  city: String
+  year: Int
+  icsrverticalsID: ID! @index(name: "byICSRverticals")
+}
+
+type ICSRverticals @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Vertical: String
+  imageurl: String
+  DataVisitations: [DataVisitation] @hasMany(indexName: "byICSRverticals", fields: ["id"])
+}

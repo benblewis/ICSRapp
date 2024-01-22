@@ -1,0 +1,111 @@
+{
+  "api": {
+    "policingauthapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "policelambdafunc"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "policinglabb7a1d48c": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "policelambdafunc": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_policelambdafunc_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "policelambdafunc"
+        }
+      ]
+    },
+    "AMPLIFY_function_policelambdafunc_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "policelambdafunc"
+        }
+      ]
+    },
+    "AMPLIFY_storage_policinglab69078f83_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "policinglab69078f83"
+        }
+      ]
+    },
+    "AMPLIFY_storage_policinglab69078f83_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "policinglab69078f83"
+        }
+      ]
+    },
+    "AMPLIFY_storage_policinglab8c318963_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "policinglab8c318963"
+        }
+      ]
+    },
+    "AMPLIFY_storage_policinglab8c318963_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "policinglab8c318963"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "policinglab69078f83": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "serviceType": "imported"
+    }
+  }
+}
