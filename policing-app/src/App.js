@@ -124,8 +124,15 @@ function lists3(){
   }
 
 async function generateDownloadLinks(fileKey) {
-  const url= await Storage.get(fileKey);
-  return url;
+  // per https://docs.amplify.aws/javascript/build-a-backend/storage/download/#generate-a-download-url
+  const getUrlResult = await getUrl({
+    key: fileKey,
+    options: {
+      accessLevel: 'guest',
+      expiresIn: 900,
+    },
+  });
+  return getUrlResult.url.toString();
 }
   useEffect(() => {
     listObjectsFromS3();
