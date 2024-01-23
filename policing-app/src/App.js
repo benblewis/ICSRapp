@@ -125,7 +125,7 @@ function lists3(){
 
 async function generateDownloadLinks(fileKey) {
   // per https://docs.amplify.aws/javascript/build-a-backend/storage/download/#generate-a-download-url
-  const getUrlResult = await getUrl({
+  const getUrlResult = await Storage.getUrl({
     key: fileKey,
     options: {
       accessLevel: 'guest',
