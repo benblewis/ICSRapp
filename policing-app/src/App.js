@@ -62,9 +62,9 @@ function App({signOut, user}) {
   //console.log(s3Objects)
   async function listObjectsFromS3(){
     try{
-    const s3Objects = await Storage.list("*");
+      const s3Objects = await Storage.list({prefix: "*", options: {listAll: true}} );
     //console.log("s3Objects",s3Objects);
-    s3Objects.map(async (item) => {
+    s3Objects.results.map(async (item) => {
       console.log(30, item);
       let downloadLink = await generateDownloadLinks(item.key);
       setS3DownloadLinks((s3DownloadLinks) => [
@@ -117,11 +117,6 @@ function App({signOut, user}) {
   }
 */
 
-function lists3(){
-  Storage.list('')
-  .then(result => console.log(result))
-  .catch(err => console.log(err));
-  }
 
 async function generateDownloadLinks(fileKey) {
   // per https://docs.amplify.aws/javascript/build-a-backend/storage/download/#generate-a-download-url
@@ -138,9 +133,9 @@ async function generateDownloadLinks(fileKey) {
     listObjectsFromS3();
   }, []);
 
-  useEffect(() => {
+  /*useEffect(() => {
     lists3();
-  }, []);
+  }, []);*/
 
   return (
     <div className="App">
