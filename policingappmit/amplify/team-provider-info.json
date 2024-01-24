@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-policingappmit-dev-125853-authRole",
+      "UnauthRoleArn": "arn:aws:iam::148750120244:role/amplify-policingappmit-dev-125853-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::148750120244:role/amplify-policingappmit-dev-125853-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-policingappmit-dev-125853-deployment",
+      "UnauthRoleName": "amplify-policingappmit-dev-125853-unauthRole",
+      "StackName": "amplify-policingappmit-dev-125853",
+      "StackId": "arn:aws:cloudformation:us-east-2:148750120244:stack/amplify-policingappmit-dev-125853/3da60610-bae2-11ee-90d7-0a43a7fd4909",
+      "AmplifyAppId": "d39qtp1rdemf31"
+    },
+    "categories": {
+      "auth": {
+        "policingappmite42503d8": {}
+      },
+      "storage": {
+        "policingstorage": {}
+      }
+    }
+  }
+}
