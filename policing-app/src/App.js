@@ -77,7 +77,20 @@ function App({signOut, user}) {
     }
   }
 
-
+  async function fetchS3Objects() {
+    try {
+      const response = await Storage.list({
+        prefix: '',
+        options: {
+          listAll: true
+        }
+      });
+      // render list items from response.items
+    } catch (error) {
+      console.log('Error ', error);
+    }
+  }
+  fetchS3Objects();
 /*async function listObjectsFromS3() {
   try {
     const s3Objects = await Storage.list("*");
@@ -132,10 +145,6 @@ async function generateDownloadLinks(fileKey) {
   useEffect(() => {
     listObjectsFromS3();
   }, []);
-
-  /*useEffect(() => {
-    lists3();
-  }, []);*/
 
   return (
     <div className="App">
