@@ -1,0 +1,14 @@
+{
+  "resourceName": "policingstorage",
+  "policyUUID": "dc2fbb5c",
+  "bucketName": "policingbucket",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

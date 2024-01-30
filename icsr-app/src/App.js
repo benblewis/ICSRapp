@@ -23,11 +23,14 @@ function App() {
       <TopBar width={'100vw'}/>
       <LandingHeader width={'100vw'}/>
       <DescriptionofVerticals width={'100vw'}/>
+      <div className='verticals'>
       <Policing />
       <Housing />
       <Healthcare />
       <SocialMedia />
+      </div>
     </div>
+
   );
 }
 

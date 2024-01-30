@@ -24,6 +24,14 @@
   color: white;
 }
 
+.verticals {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap as needed */
+  gap: 10px; /* Space between items */
+}
+
 .App-link {
   color: #61dafb;
 }
