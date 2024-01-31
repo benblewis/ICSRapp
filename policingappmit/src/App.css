@@ -1,5 +1,5 @@
 #root {
-  background-color: orange;
+  background-color: lightblue;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -16,6 +16,14 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.descs {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap as needed */
+  gap: 10px; /* Space between items */
 }
 
 @keyframes logo-spin {

@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { TextProps, ViewProps } from "@aws-amplify/ui-react";
+import { FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -17,12 +17,12 @@ export declare type Variant = {
     overrides: EscapeHatchProps;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type DescriptionOverridesProps = {
-    Description?: PrimitiveOverrideProps<ViewProps>;
-    "Data Description"?: PrimitiveOverrideProps<TextProps>;
-    "The data hub contains dispatcher and police stop data from roughly 40 participating cities in America. Below is a list of our publicly available datasets organized by state/city/(call or stop)/year. Call data refers to dispatcher data, while stop data is data collected from police stop interactions."?: PrimitiveOverrideProps<TextProps>;
+export declare type HealthcareOverridesProps = {
+    Healthcare?: PrimitiveOverrideProps<FlexProps>;
+    "image 3"?: PrimitiveOverrideProps<ImageProps>;
+    "Healthcare Lab"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type DescriptionProps = React.PropsWithChildren<Partial<ViewProps> & {
-    overrides?: DescriptionOverridesProps | undefined | null;
+export declare type HealthcareProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: HealthcareOverridesProps | undefined | null;
 }>;
-export default function Description(props: DescriptionProps): React.ReactElement;
+export default function Healthcare(props: HealthcareProps): React.ReactElement;

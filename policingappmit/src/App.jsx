@@ -8,7 +8,7 @@ import { getUrl, list } from 'aws-amplify/storage';
 import MyImage from './ui-components/policeimage.jpg'; 
 
 import {
-  PolicingPageHeader, Description
+  TopBar, PolicingPageHeader, Description
  } from './ui-components';
  
 function App({ signOut, user }) {
@@ -51,22 +51,23 @@ function App({ signOut, user }) {
 
   return (
     <>
+    <div><TopBar /></div>
+    <h1>Welcome to the Policing Lab</h1>
+      <Button onClick={signOut}>Sign out</Button>
       <div>
           <img src={MyImage} 
           className="logo" 
           alt="PoliceImage"
-          height="100%"
-          width="100%"
+          height="80%"
+          width="80%"
           />
         </div>
 
-      <div>
+      <div className='descs'>
         <PolicingPageHeader />
         <Description />
       </div>
-      <h1>Hello Criminal Justice Researcher</h1>
-      <Button onClick={signOut}>Sign out</Button>
-      <h1>Bucket contents</h1>
+      <h1>Click the file paths below to download the data</h1>
       <div className="card">
           {fileUrls.map(([key, url]) => (
               <p key={key}><a href={url}>{key}</a></p>

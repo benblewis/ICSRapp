@@ -12,8 +12,8 @@ export default function Description(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="532px"
-      height="231px"
+      width="680px"
+      height="260px"
       display="block"
       gap="unset"
       alignItems="unset"
@@ -26,11 +26,11 @@ export default function Description(props) {
       {...rest}
     >
       <Text
-        fontFamily="Kameron"
+        fontFamily="Source Sans Pro"
         fontSize="20px"
         fontWeight="700"
         color="rgba(0,0,0,1)"
-        lineHeight="25.41015625px"
+        lineHeight="25.139999389648438px"
         textAlign="center"
         display="block"
         direction="column"
@@ -40,19 +40,19 @@ export default function Description(props) {
         gap="unset"
         alignItems="unset"
         position="absolute"
-        top="41px"
-        left="calc(50% - 84.5px - 0.5px)"
+        top="19px"
+        left="calc(50% - 73.5px - 0.5px)"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Data Description"
         {...getOverrideProps(overrides, "Data Description")}
       ></Text>
       <Text
-        fontFamily="Kameron"
+        fontFamily="Source Sans Pro"
         fontSize="20px"
         fontWeight="400"
         color="rgba(0,0,0,1)"
-        lineHeight="23.740234375px"
+        lineHeight="25.139999389648438px"
         textAlign="center"
         display="block"
         direction="column"
@@ -62,14 +62,14 @@ export default function Description(props) {
         gap="unset"
         alignItems="unset"
         position="absolute"
-        top="86px"
+        top="54px"
         left="calc(50% - 240px - 0px)"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="The data hub contains dispatcher and police stop data from 40 participating cities in America&#xA;&#xA;Toggle with the data visualization tool on the left to examine crime rates fora specific state overtime"
+        children="The data hub contains dispatcher and police stop data from roughly 40 participating cities in America.&#xA;&#xA;Below is a list of our publicly available datasets organized by state/city/(call or stop)/year.&#xA;Call data refers to dispatcher data, while stop data is data collected from police stop interactions."
         {...getOverrideProps(
           overrides,
-          "The data hub contains dispatcher and police stop data from 40 participating cities in America Toggle with the data visualization tool on the left to examine crime rates fora specific state overtime"
+          "The data hub contains dispatcher and police stop data from roughly 40 participating cities in America. Below is a list of our publicly available datasets organized by state/city/(call or stop)/year. Call data refers to dispatcher data, while stop data is data collected from police stop interactions."
         )}
       ></Text>
     </View>

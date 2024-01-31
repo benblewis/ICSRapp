@@ -20,9 +20,11 @@ import {
 function App() {
   return (
     <div className="App">
+      <div className='top'>
       <TopBar width={'100vw'}/>
       <LandingHeader width={'100vw'}/>
       <DescriptionofVerticals width={'100vw'}/>
+      </div>
       <div className='verticals'>
       <Policing />
       <Housing />
