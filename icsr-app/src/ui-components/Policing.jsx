@@ -6,14 +6,14 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "./utils";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
-import pic from "./ICSR-Policing_image1.jpg"
+import img from "./Policing.png"
 export default function Policing(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      gap="10px"
+      gap="0px"
       direction="row"
       width="417px"
       height="277px"
@@ -21,40 +21,44 @@ export default function Policing(props) {
       alignItems="flex-start"
       overflow="hidden"
       position="relative"
-      padding="11px 7px 11px 7px"
-      backgroundColor="rgba(196,196,196,1)"
+      boxShadow="0px 0px 0px rgba(0, 0, 0, 0.25)"
+      borderRadius="20px"
+      padding="0px 0px 0px 0px"
+      //backgroundColor="rgba(196,196,196,1)"
       {...getOverrideProps(overrides, "Policing")}
       {...rest}
     >
       <Image
-        src={pic}
-        width="417px"
-        height="277px"
+        src={img}
+        width="100%"
+        height="100%"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
         shrink="0"
         position="relative"
+        borderRadius="1px"
         padding="0px 0px 0px 0px"
         objectFit="cover"
         {...getOverrideProps(overrides, "Rectangle 3")}
       ></Image>
       <Text
-        fontFamily="Kameron"
-        fontSize="20px"
-        fontWeight="700"
-        color="rgba(0,0,0,1)"
-        lineHeight="25.41015625px"
+        fontFamily="Source Sans Pro"
+        fontSize="36px"
+        fontWeight="600"
+        color="rgba(255,255,255,1)"
+        lineHeight="45.25199890136719px"
         textAlign="center"
         display="block"
         direction="column"
         justifyContent="unset"
-        width="unset"
+        width="189px"
         height="unset"
         gap="unset"
         alignItems="unset"
         shrink="0"
+        alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"

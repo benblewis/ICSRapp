@@ -3,14 +3,15 @@ import './App.css';
 
 import { withAuthenticator } from '@aws-amplify/ui-react';
 
+import MyImage from './ui-components/faces.png'; 
 import {
-  DescriptionofVerticals,
-  LandingHeader,
   Housing,
   Healthcare,
   SocialMedia,
   TopBar, 
-  Policing
+  Policing,
+  MITsInitiativeonCombatingSystemicRacismUsingDatatoinformunbiasedpolicyrecommendations,
+  Line1
  } from './ui-components';
 
  const DEFAULT_PADDING = {
@@ -21,16 +22,31 @@ function App() {
   return (
     <div className="App">
       <div className='top'>
-      <TopBar width={'100vw'}/>
-      <LandingHeader width={'100vw'}/>
-      <DescriptionofVerticals width={'100vw'}/>
+      <TopBar />
+      <MITsInitiativeonCombatingSystemicRacismUsingDatatoinformunbiasedpolicyrecommendations />
+      <Line1 />
       </div>
+      <div>
+          <img src={MyImage} 
+          className="faces" 
+          alt="HomeImage"
+          height="20%"
+          width="20%"
+          />
+        </div>
+        <br></br>
+        <br></br>
       <div className='verticals'>
       <Policing />
       <Housing />
       <Healthcare />
       <SocialMedia />
       </div>
+      <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+}}><Line1 /></div>
     </div>
 
   );

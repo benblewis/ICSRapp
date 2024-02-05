@@ -58,7 +58,7 @@ export default function TopBar(props) {
           {...getOverrideProps(overrides, "Links")}
         >
           <Text
-            fontFamily="Arial"
+            fontFamily="Source Sans Pro"
             fontSize="20px"
             fontWeight="400"
             color="rgba(0,0,0,1)"
